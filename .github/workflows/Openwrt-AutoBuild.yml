@@ -256,9 +256,7 @@ jobs:
         rm -rf *.manifest
         rm -rf *.json.b
         rm -rf *.config
-        rm -rf sha256sums
         rm -rf *.buildinfo
-        rm -rf /*
         mv -f profiles.json profiles.json.b || true
         cp $GITHUB_WORKSPACE/openwrt/.config ${{matrix.target}}.config || true
         cp $GITHUB_WORKSPACE/openwrt/build_dir/target-*/linux-*/linux-*/.config ${{matrix.target}}_kernel.config || true
